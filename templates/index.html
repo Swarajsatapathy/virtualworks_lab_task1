@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quick Note</h1>
+            <p>Capture your thoughts instantly.</p>
+        </header>
+
+        <main>
+            <section class="note-input-section">
+                <form id="note-form">
+                    <textarea id="note-content" placeholder="What's on your mind?" required autofocus></textarea>
+                    <button type="submit" id="save-btn">Save Note</button>
+                </form>
+            </section>
+
+            <section class="notes-display-section">
+                <h2>Your Notes</h2>
+                <div id="notes-list" class="notes-grid">
+                    <!-- Notes will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
